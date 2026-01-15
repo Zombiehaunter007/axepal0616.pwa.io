@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>TIM PWA</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" sizes="512x512" href="images/icons/tim512.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="images/icons/tim512.png">
+    <script src="app.js" defer></script>
+    <style>
+        :root { color-scheme: light dark; }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; }
+        header {
+            position: sticky; top: 0; z-index: 1;
+            display: flex; gap: .75rem; align-items: center; justify-content: space-between;
+            padding: .75rem 1rem; background: #fff; border-bottom: 1px solid #eee;
+        }
+        @media (prefers-color-scheme: dark) {
+            header { background: #111; border-color: #222; }
+            body { background: #000; color: #eee; }
+        }
+        header nav a { text-decoration: none; color: inherit; font-weight: 600; }
+        main { padding: 1rem; max-width: 780px; margin: 0 auto; }
+        h2 { margin: .25rem 0 1rem; font-size: clamp(1.25rem, 2.5vw + 1rem, 2rem); }
+        .hero-img { width: 100%; height: auto; max-height: 55vh; object-fit: cover; border-radius: 12px; }
+        #content figure { margin: 0; }
+        #content img { max-width: 100%; height: auto; border-radius: 8px; }
+        #installBtn { appearance: none; border: 1px solid #ccc; background: #f7f7f7; color: #111; padding: .5rem .75rem; border-radius: .5rem; font-weight: 600; }
+        #installBtn[hidden] { display: none; }
+    </style>
+    
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#content">Dogs</a>
+    </nav>
+    <button id="installBtn" hidden>Install</button>
+    
+</header>
+<main>
+    <h2>TIM</h2>
+    <img class="hero-img" src="images/tim.jpg" alt="Tim">
+    <section id="content" aria-live="polite"></section>
+    
+</main>
+</body>
+</html>
