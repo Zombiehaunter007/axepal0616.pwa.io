@@ -5,6 +5,7 @@ const CORE_ASSETS = [
   'app.js',
   'manifest.webmanifest',
   'images/tim.jpg',
+  'images/icons/tim192.png',
   'images/icons/tim512.png',
   'images/icons/tim1024.png'
 ];
