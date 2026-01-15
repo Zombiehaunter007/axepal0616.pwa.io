@@ -6,8 +6,7 @@ const CORE_ASSETS = [
   'manifest.webmanifest',
   'images/tim.jpg',
   'images/icons/tim192.png',
-  'images/icons/tim512.png',
-  'images/icons/tim1024.png'
+  'images/icons/tim512.png'
 ];
 
 self.addEventListener('install', (event) => {
